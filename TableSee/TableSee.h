@@ -23,6 +23,28 @@ public://
 
 
 	void resize(size_t newsized);//всё то же самое что и в просмотровой
+	void printRandom()
+	{
+		K* arrused = new K[countUsed];
+		int add = 0;
+		while (countUsed > add)
+		{
+			int currentGet = rand() % MaxSizeTable;
+			bool f = false;
+			for (int i = 0; i < add; i++)
+			{
+				if (arrused[i] == currentGet)
+					f = true;
+			}
+			
+			if (f || arrKey[currentGet] == K())
+				continue;
+
+			arrused[add++] = currentGet;
+			std::cout << arrKey[currentGet] << "|" << arrVal[currentGet]<<std::endl;
+			
+		}
+	}
 
 
 	friend std::ostream& operator<<(std::ostream& os, table<K, V>& t)//оператор вывода в консоль

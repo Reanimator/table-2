@@ -14,9 +14,7 @@ void main()
 	v.dobavit(31, std::string("Проверочная строка2"));//так же
 	v.dobavit(15, std::string("Строка проверки №3"));//и так же
 
-	cout << v[15] << endl;//соответствует число перед заптой
-	cout << v[12] << endl;//так же
-	cout << v[31] << endl;//и так же
+	v.printRandom();
 
 	
 		
